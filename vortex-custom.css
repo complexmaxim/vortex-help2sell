@@ -1,0 +1,20 @@
+:root {
+  
+  /* Цвета */
+  --vrx-primary-color: #1976d2; /* По умолчанию */
+  --vrx-secondary-color: #26A69A; /* По умолчанию */
+  --vrx-accent-color: #9C27B0; /* По умолчанию */
+
+  --vrx-dark-color: #1d1d1d; /* По умолчанию */
+  --vrx-dark-page-color: #121212; /* По умолчанию */
+
+  --vrx-positive-color: #21BA45; /* По умолчанию */
+  --vrx-negative-color: #C10015; /* По умолчанию */
+  --vrx-info-color: #31ccec; /* По умолчанию */
+  --vrx-warning-color: #F2C037; /* По умолчанию */
+
+  /* Шрифты */
+  --vrx-text-font-family: 'Inter', Arial, sans-serif; /* По умолчанию */
+  --vrx-text-color: #474747; /* По умолчанию */
+
+}
