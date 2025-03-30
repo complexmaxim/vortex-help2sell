@@ -3,7 +3,7 @@
   /* Цвета */
   --vrx-h2s-primary-color: #1976d2; /* Основной цвет */
   --vrx-h2s-secondary-color: #26A69A; /* Вторичный цвет */
-  --vrx-h2s-accent-color: #4d3a51; /* Акцентный цвет */
+  --vrx-h2s-accent-color: #9C27B0; /* Акцентный цвет */
   --vrx-h2s-accent-hover-color: #7b1fa2; /* Акцентный цвет при наведении */
 
   --vrx-h2s-positive-color: #21BA45; /* Цвет успешного действия */
@@ -21,7 +21,7 @@
   --vrx-h2s-main-button-text-color: #fff; /* Цвет текста основной кнопки */
   --vrx-h2s-main-button-hover-bg-color: var(--vrx-h2s-accent-hover-color); /* Цвет фона основной кнопки при наведении */
   --vrx-h2s-main-button-hover-text-color: #fff; /* Цвет текста основной кнопки при наведении */
-  --vrx-h2s-main-button-border-radius: 30px; /* Радиус скругления кнопки */
+  --vrx-h2s-main-button-border-radius: 10px; /* Радиус скругления кнопки */
 
   /* Основное модальное окно */
   --vrx-h2s-main-modal-bg-color: #fff; /* Цвет фона модального окна */
