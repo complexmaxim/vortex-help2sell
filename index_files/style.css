@@ -1,0 +1,31 @@
+.r002 {
+	display: none;
+}
+.c600 {
+	display: none;
+}
+.r001, .r002{
+	display: none;
+}
+@media (max-width: 1024px) and (min-width: 768px)  {
+	.r001{
+		display: block;
+	}
+	.r002 {
+		display: none;
+	}
+	}
+@media (max-width: 768px) {
+	.c006 {
+		display: none;
+	}
+	.c600 {
+		display: block;
+	}
+	.r001 {
+		display: none;
+	}
+	.r002 {
+		display: inherit;
+	}
+}

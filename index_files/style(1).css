@@ -1,0 +1,38 @@
+.caseslist__elem-hover .caseslist__elem-hover_span {
+    margin-bottom: 15px;
+   max-width: 255px;
+	font-family: "Atyp Display";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 19.74px;
+	text-align: left;
+	left: -10px;
+	position: relative;
+
+
+}
+a.caseslist__elem.caseslist__elem__last.dww---2 {
+	color: black;
+}
+a.caseslist__elem.caseslist__elem__last.dww---2 .caseslist__elem_name {
+	font-weight: 600;
+}
+a.caseslist__elem.caseslist__elem__last.dww---2 .caseslist__elem_name .fweight600 {
+	font-weight: 400;
+}
+@media (max-width: 768px) {
+	a.caseslist__elem:hover .caseslist__elem-hover {
+		display: none;
+	}
+	a.caseslist__elem:hover {
+		transform: scale(1.00);
+    	transition: 0.3s;
+	}
+}
+.caseslist__elem {
+	color: black;
+}
+.caseslist__elem_name {
+	display: block;
+    max-width: 90%;
+}

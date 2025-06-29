@@ -1,0 +1,309 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+
+.modal-container {
+    background: rgba(239, 239, 239, 1);
+    border-radius: 35px;
+    padding: 60px 95px 55px 95px;
+    position: relative;
+    animation: modalFadeIn 0.3s ease-out;
+    overflow: hidden;
+}
+
+
+
+.modal-container-white {
+    padding: 12px;
+    background: white;
+}
+
+.modal-container-white h2 {
+    margin: 0!important;
+    font-family: Atyp Display;
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 110.00000000000001%;
+    letter-spacing: 0%;
+    text-align: center;
+
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 5px;
+}
+
+.modal-title {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: center;
+}
+
+.modal-subtitle {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #666;
+    text-align: center;
+}
+
+.green-success {
+    background-image: url(/include/images/greensuccess.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.modal-success {
+    min-height: 400px; /* Чтобы было место для изображения */
+}
+
+.green-success {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 204px;
+    background-image: url(/include/images/greensuccess.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    z-index: 1;
+    opacity: 0.8; /* Можно регулировать прозрачность */
+}
+
+.success-content {
+    position: relative;
+    z-index: 2; /* Чтобы контент был поверх изображения */
+}
+
+/* Стили формы */
+.contact-form {
+    text-align: left;
+    max-width: 360px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactFormContainer {
+    max-width: max-content;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-label {
+    font-family: Atyp Display;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(67, 67, 67, 1);
+
+}
+
+.success-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input,
+.form-textarea {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-input {
+    height: 50px;
+    border-radius: 55px;
+}
+
+::placeholder {
+    font-family: Atyp Display;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 86%;
+    letter-spacing: 0%;
+    color: rgba(186, 186, 186, 1);
+}
+
+.form-textarea {
+    min-height: 100px;
+    border-radius: 19px;
+    resize: none;
+}
+
+.form-agree {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    font-size: 14px;
+}
+#contactModal .agreepolitic {
+    font-family: 'Atyp Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 86%;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+#contactModal .agreepolitic a {
+    color: black;
+    text-decoration: underline;
+}
+#contactModal input.squainput:checked + label:before {
+    content: url(/bitrix/templates/md/images/vec.png);
+    position: absolute;
+    left: 2px;
+    top: 1px;
+}
+
+.squainput {
+    display: none;
+}
+
+
+.agreepolitic label {
+    position: relative;
+    width: 13px;
+    display: inline-block;
+    height: 13px;
+    border: 1px solid black;
+    margin-right: 6px;
+    margin-bottom: 0;
+}
+
+
+#contactModal .form-submit {
+    background: rgba(35, 33, 33, 1);
+    color: white;
+    border: none;
+    padding: 18px 20px;
+    border-radius: 28px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.form-submit:hover {
+    background: #0052a3;
+}
+
+/* Стили сообщения об успехе */
+.modal-success {
+    text-align: center;
+    display: none;
+}
+
+.success-content {
+    margin-top: 20px;
+}
+
+.success-content p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-link {
+    padding: 10px 15px;
+    background: #f0f0f0;
+    border-radius: 6px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.social-link:hover {
+    background: #e0e0e0;
+}
+
+@media (max-width: 991px) {
+    .modal-container-white h2 {
+        font-family: Atyp Display;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: 0;
+        text-align: center;
+
+    }
+
+    .contact-form {
+        text-align: left;
+        max-width: 280px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .modal-container {
+        background: rgba(239, 239, 239, 1);
+        border-radius: 35px;
+        padding: 55px 17px 20px 17px;
+        position: relative;
+        animation: modalFadeIn 0.3s ease-out;
+        overflow: hidden;
+    }
+}
+
+
+/* Анимации */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

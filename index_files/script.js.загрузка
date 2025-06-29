@@ -1,0 +1,99 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('contactModal');
+    const formContainer = document.getElementById('contactFormContainer');
+    const successContainer = document.getElementById('successMessage');
+    const form = document.getElementById('contactForm');
+    const closeButtons = document.querySelectorAll('.modal-close');
+
+    // Функции для открытия/закрытия модального окна
+    function openModal() {
+        modal.style.display = 'flex';
+        formContainer.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        showForm();
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    function showForm() {
+        successContainer.style.display = 'none';
+        form.reset();
+    }
+
+    function showSuccess() {
+        successContainer.style.display = 'block';
+    }
+
+    // Обработчики закрытия
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', closeModal);
+    });
+
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Обработка отправки формы
+    $("#contactForm .form-submit").on("click", function (event) {
+        event.preventDefault();
+
+        var $form = $('#contactForm');
+        var input_error = 0;
+
+        $form.find('input, textarea, select').each(function () {
+            var $field = $(this);
+            var isValid = true;
+
+            if ($field.prop('required')) {
+                if ($field.is(':checkbox')) {
+                    isValid = $field.is(':checked');
+                } else {
+                    isValid = $field.val().trim() !== '';
+                }
+            }
+
+            if (!isValid) {
+                input_error++;
+                $field.closest('.form-group').addClass('error');
+            } else {
+                $field.closest('.form-group').removeClass('error');
+            }
+        });
+
+        if (input_error === 0) {
+            $.ajax({
+                url: '/local/ajax/send_contact_form.php',
+                method: 'POST',
+                dataType: 'html',
+                data: $form.serialize(),
+                success: function (data) {
+
+                    if (data === 'Success') {
+                        $form[0].reset();
+                        $('#contactFormContainer').hide(); // скрываем форму
+                        $('#successMessage').fadeIn(); // показываем сообщение об успехе
+                    } else {
+                        alert('Заявка отправлена ' );
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Ошибка AJAX:', status, error);
+                    alert('Ошибка при отправке формы');
+                }
+            });
+        } else {
+            alert('Пожалуйста, заполните все обязательные поля.');
+        }
+    });
+
+    // Экспортируем функции для открытия модалки извне
+    window.contactModal = {
+        open: openModal,
+        close: closeModal
+    };
+});
